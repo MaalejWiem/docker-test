@@ -4,3 +4,12 @@ services:
 scripts: 
     - docker build -t wmaalej/node2 .
     - docker images wmaalej/node2s
+
+before_deploy:
+    - docker login wmaalej -p Doubleinfinity123!
+
+deploy:
+    provider: script
+    script: docker push wmaalej/test-docker
+    on:
+        branch: master
