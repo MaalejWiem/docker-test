@@ -1,0 +1,6 @@
+sudo: required
+services:
+    - docker
+scripts: 
+    - docker build -t wmaalej/node2 .
+    - docker images wmaalej/node2s
