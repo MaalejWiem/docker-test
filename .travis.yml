@@ -6,7 +6,7 @@ scripts:
     - docker images wmaalej/node2s
 
 before_deploy:
-    - docker login wmaalej -p Doubleinfinity123!
+    - docker login -u wmaalej -p Doubleinfinity123!
 
 deploy:
     provider: script
